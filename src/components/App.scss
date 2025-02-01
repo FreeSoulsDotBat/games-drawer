@@ -1,0 +1,157 @@
+.app {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+
+	&__raffle {
+		display: flex;
+		justify-content: flex-start;
+		gap: 40px;
+		align-items: center;
+		flex-direction: column;
+		width: 600px;
+		height: 750px;
+		max-height: 750px;
+		background-color: rgb(36, 156, 156);
+		border-radius: 20px;
+		padding: 20px 40px 20px 40px;
+	}
+
+	&__title {
+		line-height: 0;
+		font-family: 'Courier New', Courier, monospace;
+		font-size: 40px;
+		text-align: center;
+	}
+
+	&__input-container {
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		width: 100%;
+		gap: 10px;
+	}
+
+	&__add-game {
+		height: 28px;
+		width: 100%;
+		background-color: black;
+		outline: none;
+		border: 0;
+	}
+
+	&__edit-game {
+		height: 28px;
+		width: 100%;
+	}
+
+	&__label {
+		font-weight: 500;
+	}
+
+	&__games-row {
+		font-weight: 600;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: fit-content;
+		margin-bottom: 16px;
+	}
+
+	&__input-box {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	&__games-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		overflow-y: auto;
+		align-items: center;
+		width: 100%;
+
+		&::-webkit-scrollbar {
+			width: 14px;
+			height: 18px;
+		}
+		&::-webkit-scrollbar-thumb {
+			height: 6px;
+			border: 4px solid rgba(0, 0, 0, 0);
+			background-clip: padding-box;
+			border-radius: 7px;
+			background-color: rgba(0, 0, 0, 0.15);
+			box-shadow:
+				inset -1px -1px 0px rgba(0, 0, 0, 0.05),
+				inset 1px 1px 0px rgba(0, 0, 0, 0.05);
+		}
+		&::-webkit-scrollbar-button {
+			width: 0;
+			height: 0;
+			display: none;
+		}
+		&::-webkit-scrollbar-corner {
+			background-color: transparent;
+		}
+	}
+
+	&__games-title {
+		line-height: 0;
+		font-size: 22px;
+	}
+
+	&__game-operations {
+		width: 100%;
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	&__games-raffle-container {
+		display: flex;
+		height: 100%;
+		overflow-y: auto;
+		width: 100%;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__raffle-button {
+		width: 45%;
+		height: 40px;
+		font-weight: 600;
+		background-color: black;
+		outline: none;
+		border: none;
+
+		&:focus,
+		&:focus-visible {
+			outline: none;
+		}
+
+		&:disabled {
+			cursor: not-allowed;
+		}
+	}
+
+	&__raffle-container {
+		width: 100%;
+		display: flex;
+		margin-top: 20px;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__raffle-result {
+		width: 45%;
+		height: 90px;
+		border-radius: 10px;
+		background-color: black;
+	}
+}
